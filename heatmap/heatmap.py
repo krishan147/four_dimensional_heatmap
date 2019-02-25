@@ -13,8 +13,6 @@ df["Date"] = pd.to_datetime(df["Date"], format='%d/%m/%Y')
 def heatmap(frame):
     # Bottom,Left,Right,Top
 
-    print (frame)
-
     p = ggplot(frame, aes('Date', 'Site')) + geom_tile(aes(fill='Spend')) \
         + scale_fill_gradientn(colors=['#9ebcda', '#8c6bb1', '#88419d', '#6e016b']) \
         + ggtitle("title") \
